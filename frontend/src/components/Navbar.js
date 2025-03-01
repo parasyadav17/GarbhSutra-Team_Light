@@ -142,11 +142,20 @@ const Navbar = () => {
                         </button>
                         {activeDropdown === 'resources' && (
                             <div className="absolute z-10 bg-white shadow-lg w-48">
-                                <Link to="/articles" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                                    Articles
+                                <Link to="/resources" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                    Resources
                                 </Link>
-                                <Link to="/tools" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                                    Tools
+                                <Link to="/ovulationCalendar" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                    Ovulation Calendar
+                                </Link>
+                                <Link to="/healthy-pregnancy-recipes" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                    Healthy Recipes
+                                </Link>
+                                <Link to="/pregnancy-questions" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                    Pregnancy Questions
+                                </Link>
+                                <Link to="/nearby-hospitals" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                    Nearby Hospitals
                                 </Link>
                             </div>
                         )}
