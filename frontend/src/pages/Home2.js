@@ -1,26 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Menu, X, ChevronRight, MessageCircle, Calendar, Calculator, Heart, Facebook, Twitter, Instagram } from 'lucide-react';
+import img7 from "../assets/bg-img-7.webp"
 
 const HomePage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="min-h-screen font-sans bg-white text-gray-700">
+        <div className="min-h-screen font-sans bg-white text-gray-700 ">
             {/* Header */}
-            <header className="bg-white shadow-sm">
-                <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-                    <div className="flex items-center">
-                        <img
-                            src="/images/logo.png"
-                            alt="American Pregnancy Association Logo"
-                            className="h-12 mr-2"
-                        />
-                        <div className="hidden md:block text-pink-400">
-                            <h1 className="text-lg font-semibold">American Pregnancy</h1>
-                            <h2 className="text-sm">ASSOCIATION</h2>
-                        </div>
-                    </div>
+            <header className="bg-white shadow-sm ">
+                <div className="container mx-auto px-4 py-3 flex justify-end items-end">
+
 
                     <div className="flex items-center">
                         <button className="p-2 md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -59,11 +50,11 @@ const HomePage = () => {
             )}
 
             {/* Hero Section */}
-            <div className="bg-gray-100 bg-opacity-50">
-                <div className="container mx-auto px-4 py-8 text-center">
-                    <h2 className="text-4xl font-semibold text-blue-800 mb-2">PREGNANT?</h2>
-                    <h3 className="text-2xl text-pink-500 mb-6">WE'RE HERE FOR YOU.</h3>
-                    <p className="text-gray-600 mb-4 max-w-2xl mx-auto">
+            <div className="bg-gray-100 bg-opacity-50 bgimg h-[500px]">
+                <div className="container mx-auto px-4 py-8 text-center pt-28 ">
+                    <h2 className="text-4xl font-semibold text-blue-800 mb-2 text-5xl pb-5">PREGNANT ?</h2>
+                    <h3 className="text-2xl text-pink-500 mb-6 font-bold pb-4">WE'RE HERE FOR YOU.</h3>
+                    <p className="text-gray-600 mb-4 max-w-2xl mx-auto pb-2">
                         Pregnancy comes with so many questions. We've captured dozens of the top questions to create the Pregnancy Questions Center. Come see what so many people are asking!
                     </p>
                     <Link
@@ -76,27 +67,23 @@ const HomePage = () => {
             </div>
 
             {/* Welcome Section */}
-            <section className="container mx-auto px-4 py-8 text-center">
-                <h2 className="text-2xl font-semibold text-blue-700 mb-2">Welcome to the American Pregnancy Association</h2>
-                <h3 className="text-xl text-pink-400 mb-4">Supporting Your Pregnancy Journey</h3>
-                <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            <section className="container mx-auto px-4 py-8 text-center w-6/12 mt-8">
+                <h2 className="font-bold text-blue-900 text-5xl mb-7">Welcome to the American Pregnancy Association</h2>
+                <h3 className=" text-orange-600 mb-4 font-bold text-3xl ">Supporting Your Pregnancy Journey</h3>
+                <p className="text-gray-800 mb-6 max-w-2xl mx-auto text-lg">
                     From conception through birth and all the wonderful in-betweens, our nurses and pregnancy educators are here to provide the resources and information you need for the healthiest possible pregnancy.
                 </p>
-                <hr className="w-24 mx-auto border-pink-300 mb-8" />
+                <hr className="w-24  mx-auto border-pink-300 mb-8 " />
             </section>
 
             {/* Main Categories */}
             <section className="container mx-auto px-4 py-4">
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-3 gap-4">
                     {/* Unplanned Pregnancy */}
-                    <div className="bg-pink-100 p-6 rounded-md">
+                    <div className="bg-pink-100 p-6 rounded-md unplanimg h-[300px] ">
                         <h3 className="text-xl font-medium text-pink-700 mb-2">Unplanned Pregnancy</h3>
                         <div className="flex justify-between items-center">
-                            <img
-                                src="/images/pregnancy-test.jpg"
-                                alt="Pregnancy test"
-                                className="w-32 h-24 object-cover rounded-md"
-                            />
+
                             <Link to="/unplanned-pregnancy" className="text-pink-500 flex items-center">
                                 Learn More <ChevronRight size={16} />
                             </Link>
@@ -104,14 +91,10 @@ const HomePage = () => {
                     </div>
 
                     {/* Healthy Pregnancy */}
-                    <div className="bg-pink-50 p-6 rounded-md">
+                    <div className="bg-pink-50 p-6 rounded-md healthyimg h-[300px]">
                         <h3 className="text-xl font-medium text-pink-700 mb-2">Healthy Pregnancy</h3>
                         <div className="flex justify-between items-center">
-                            <img
-                                src="/images/healthy-eating.jpg"
-                                alt="Pregnant woman eating healthy"
-                                className="w-32 h-24 object-cover rounded-md"
-                            />
+
                             <Link to="/healthy-pregnancy" className="text-pink-500 flex items-center">
                                 Learn more <ChevronRight size={16} />
                             </Link>
@@ -119,14 +102,10 @@ const HomePage = () => {
                     </div>
 
                     {/* Getting Pregnant */}
-                    <div className="bg-blue-50 p-6 rounded-md">
-                        <h3 className="text-xl font-medium text-blue-700 mb-2">Getting Pregnant</h3>
+                    <div className="bg-blue-50 p-6 rounded-md get-preg h-[300px]">
+                        <h3 className="text-xl font-medium text-blue-700 mb-2 ">Getting Pregnant</h3>
                         <div className="flex justify-between items-center">
-                            <img
-                                src="/images/belly.jpg"
-                                alt="Pregnant belly"
-                                className="w-32 h-24 object-cover rounded-md"
-                            />
+
                             <Link to="/getting-pregnant" className="text-blue-500 flex items-center">
                                 Learn more <ChevronRight size={16} />
                             </Link>
@@ -136,19 +115,19 @@ const HomePage = () => {
             </section>
 
             {/* Planning Tools */}
-            <section className="container mx-auto px-4 py-8">
-                <h2 className="text-2xl font-semibold text-blue-700 mb-6 text-center">Planning Your Pregnancy Tools</h2>
-                <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-center">
+            <section className="container mx-auto px-4 py-8 bg-gray-100">
+                <h2 className=" text-sky-900 mb-6 text-center text-5xl font-bold">Planning Your Pregnancy Tools</h2>
+                <p className="text-slate-600  mb-8 max-w-2xl mx-auto text-center text-lg">
                     From conception through birth and all the wonderful in-betweens, our nurses and pregnancy educators are here to provide the resources and information you need for the healthiest possible pregnancy.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
                     {/* Ovulation Calendar */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center p-2   hover:bg-white hover:rounded-2xl hover:border-black  hover:border-2  ">
                         <div className="w-12 h-12 flex items-center justify-center text-pink-500 mb-3">
-                            <Calendar size={32} />
+                            <Calendar size={50} />
                         </div>
-                        <h3 className="text-lg font-medium text-gray-700 mb-1">Ovulation calendar</h3>
+                        <h3 className="text-lg font-medium text-gray-700 mb-1 hover:text-pink-500">Ovulation calendar</h3>
                         <p className="text-gray-500 text-center text-sm mb-2">
                             Do you know your days of ovulation? When are you most fertile?
                         </p>
@@ -158,9 +137,9 @@ const HomePage = () => {
                     </div>
 
                     {/* Due Date Calculator */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center p-2  hover:bg-white hover:rounded-2xl hover:border-black  hover:border-2  ">
                         <div className="w-12 h-12 flex items-center justify-center text-pink-500 mb-3">
-                            <Calculator size={32} />
+                            <Calculator size={50} />
                         </div>
                         <h3 className="text-lg font-medium text-gray-700 mb-1">Pregnancy due date calculator</h3>
                         <p className="text-gray-500 text-center text-sm mb-2">
@@ -172,9 +151,9 @@ const HomePage = () => {
                     </div>
 
                     {/* Baby Names */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center p-2  hover:bg-white hover:rounded-2xl hover:border-black  hover:border-2  ">
                         <div className="w-12 h-12 flex items-center justify-center text-pink-500 mb-3">
-                            <Heart size={32} />
+                            <Heart size={50} />
                         </div>
                         <h3 className="text-lg font-medium text-gray-700 mb-1">Baby names directory</h3>
                         <p className="text-gray-500 text-center text-sm mb-2">
@@ -207,13 +186,20 @@ const HomePage = () => {
             <section className="container mx-auto px-4 py-8">
                 <div className="rounded-lg overflow-hidden">
                     <div className="flex flex-col md:flex-row">
-                        <div className="bg-white p-6 md:w-1/2">
-                            <h3 className="text-2xl font-medium">
-                                <span className="text-green-500">Talk to a </span>
-                                <span className="text-blue-600">Pregnancy</span>
-                                <span className="text-blue-400"> Educator Now</span>
+                        <div className="md:w-1/2">
+                            <img
+                                src={img7}
+                                alt="Pregnant woman"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div className="bg-white p-6 md:w-1/2 flex flex-col items-center justify-center">
+                            <h3 className="flex flex-col text-2xl font-medium">
+                                <span className="text-green-600 text-7xl mb-1">Talk <span className='text-gray-400'>to a</span> </span>
+                                <span className="text-gray-400 text-7xl mb-1">Pregnancy</span>
+                                <span className="text-gray-400  text-7xl"> Educator Now</span>
                             </h3>
-                            <p className="text-gray-600 my-4">
+                            <p className="text-gray-600 my-8 font-bold ">
                                 We're available:<br />
                                 Mon-Fri 7am - 10pm<br />
                                 Sat-Sun 9am - 7pm
@@ -221,32 +207,16 @@ const HomePage = () => {
                             <p className="text-gray-600 mb-4">
                                 Click CHAT NOW or call <a href="tel:8006722296" className="text-blue-500">(800) 672-2296</a>
                             </p>
-                            <button className="bg-pink-400 text-white px-6 py-3 rounded-full">
+                            <button className="bg-pink-400 text-white px-6 py-3 rounded-full hover:bg-green-700 transition-all duration-300">
                                 CHAT NOW
                             </button>
                         </div>
-                        <div className="md:w-1/2">
-                            <img
-                                src="/images/pregnant-woman.jpg"
-                                alt="Pregnant woman"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
+
                     </div>
                 </div>
             </section>
 
-            {/* Sponsors */}
-            <section className="container mx-auto px-4 py-8">
-                <h3 className="text-xl font-medium text-gray-700 mb-4">OUR SPONSOR PARTNERS</h3>
-                <p className="text-gray-600 mb-6">
-                    Only the best will do for babies and their parents! The American Pregnancy Association screens our sponsors' products and services for pregnancy safety, effectiveness, comfort and accuracy.
-                </p>
-                <div className="flex flex-wrap justify-center items-center gap-8 py-4">
-                    <img src="/images/sponsor1.png" alt="Multiples" className="h-12" />
-                    <img src="/images/sponsor2.png" alt="Dimin" className="h-12" />
-                </div>
-            </section>
+
 
             {/* Blog Section */}
             <section className="container mx-auto px-4 py-8">
