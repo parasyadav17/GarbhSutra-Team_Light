@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { Search, Menu, X, ChevronRight, MessageCircle, Calendar, Calculator, Heart, Facebook, Twitter, Instagram } from 'lucide-react';
 import img7 from "../assets/bg-img-7.webp"
+import logo from "../assets/super.jpg"
 
 const HomePage = () => {
+    // const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
+    // useEffect(() => {
+    //     const token = localStorage.getItem("token");
+    //     if (!token) {
+    //         navigate("/login");
+    //     }
+    // }, [navigate]);
 
     return (
         <div className="min-h-screen font-sans bg-white text-gray-700 ">
@@ -68,7 +80,8 @@ const HomePage = () => {
 
             {/* Welcome Section */}
             <section className="container mx-auto px-4 py-8 text-center w-6/12 mt-8">
-                <h2 className="font-bold text-blue-900 text-5xl mb-7">Welcome to the American Pregnancy Association</h2>
+                <h2 className="font-bold text-blue-900 text-5xl mb-7">GARBHSUTRA
+                    <h2 className='mt-2'>Nurturing Motherhood</h2></h2>
                 <h3 className=" text-orange-600 mb-4 font-bold text-3xl ">Supporting Your Pregnancy Journey</h3>
                 <p className="text-gray-800 mb-6 max-w-2xl mx-auto text-lg">
                     From conception through birth and all the wonderful in-betweens, our nurses and pregnancy educators are here to provide the resources and information you need for the healthiest possible pregnancy.
@@ -103,10 +116,10 @@ const HomePage = () => {
 
                     {/* Getting Pregnant */}
                     <div className="bg-blue-50 p-6 rounded-md get-preg h-[300px]">
-                        <h3 className="text-xl font-medium text-blue-700 mb-2 ">Getting Pregnant</h3>
+                        <h3 className="text-xl font-medium text-pink-700 mb-2 ">Getting Pregnant</h3>
                         <div className="flex justify-between items-center">
 
-                            <Link to="/getting-pregnant" className="text-blue-500 flex items-center">
+                            <Link to="/getting-pregnant" className="text-pink-500 flex items-center">
                                 Learn more <ChevronRight size={16} />
                             </Link>
                         </div>
@@ -122,47 +135,54 @@ const HomePage = () => {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20">
-                    {/* Ovulation Calendar */}
-                    <div className="flex flex-col items-center p-2   hover:bg-white hover:rounded-2xl hover:border-black  hover:border-2  ">
-                        <div className="w-12 h-12 flex items-center justify-center text-pink-500 mb-3">
-                            <Calendar size={50} />
+
+                    <Link to="/ovulationCalendar">
+                        {/* Ovulation Calendar */}
+                        <div className="flex flex-col items-center p-2   hover:bg-white hover:rounded-2xl hover:border-black  hover:border-2  ">
+                            <div className="w-12 h-12 flex items-center justify-center text-pink-500 mb-3">
+                                <Calendar size={50} />
+                            </div>
+                            <h3 className="text-lg font-medium text-gray-700 mb-1 hover:text-pink-500">Ovulation calendar</h3>
+                            <p className="text-gray-500 text-center text-sm mb-2">
+                                Do you know your days of ovulation? When are you most fertile?
+                            </p>
+                            <Link to="/tools/ovulation-calendar" className="text-blue-500 text-sm">
+                                Calculate now
+                            </Link>
                         </div>
-                        <h3 className="text-lg font-medium text-gray-700 mb-1 hover:text-pink-500">Ovulation calendar</h3>
-                        <p className="text-gray-500 text-center text-sm mb-2">
-                            Do you know your days of ovulation? When are you most fertile?
-                        </p>
-                        <Link to="/tools/ovulation-calendar" className="text-blue-500 text-sm">
-                            Calculate now
-                        </Link>
-                    </div>
+                    </Link>
 
                     {/* Due Date Calculator */}
-                    <div className="flex flex-col items-center p-2  hover:bg-white hover:rounded-2xl hover:border-black  hover:border-2  ">
-                        <div className="w-12 h-12 flex items-center justify-center text-pink-500 mb-3">
-                            <Calculator size={50} />
+                    <Link to="/calendar">
+                        <div className="flex flex-col items-center p-2  hover:bg-white hover:rounded-2xl hover:border-black  hover:border-2  ">
+                            <div className="w-12 h-12 flex items-center justify-center text-pink-500 mb-3">
+                                <Calculator size={50} />
+                            </div>
+                            <h3 className="text-lg font-medium text-gray-700 mb-1">HealthTracker Calender</h3>
+                            <p className="text-gray-500 text-center text-sm mb-2">
+                                Estimate how far along you are and see weekly development.
+                            </p>
+                            <Link to="/tools/due-date-calculator" className="text-blue-500 text-sm">
+                                Calculate now
+                            </Link>
                         </div>
-                        <h3 className="text-lg font-medium text-gray-700 mb-1">Pregnancy due date calculator</h3>
-                        <p className="text-gray-500 text-center text-sm mb-2">
-                            Estimate how far along you are and see weekly development.
-                        </p>
-                        <Link to="/tools/due-date-calculator" className="text-blue-500 text-sm">
-                            Calculate now
-                        </Link>
-                    </div>
+                    </Link>
 
-                    {/* Baby Names */}
-                    <div className="flex flex-col items-center p-2  hover:bg-white hover:rounded-2xl hover:border-black  hover:border-2  ">
-                        <div className="w-12 h-12 flex items-center justify-center text-pink-500 mb-3">
-                            <Heart size={50} />
+                    <Link to="/pregnancy-questions" >
+                        {/* Baby Names */}
+                        <div className="flex flex-col items-center p-2  hover:bg-white hover:rounded-2xl hover:border-black  hover:border-2  ">
+                            <div className="w-12 h-12 flex items-center justify-center text-pink-500 mb-3">
+                                <Heart size={50} />
+                            </div>
+                            <h3 className="text-lg font-medium text-gray-700 mb-1">Pregnancy Questions </h3>
+                            <p className="text-gray-500 text-center text-sm mb-2">
+                                Search our comprehensive directory of baby names to find the perfect name.
+                            </p>
+                            <Link to="/tools/baby-names" className="text-blue-500 text-sm">
+                                Search names
+                            </Link>
                         </div>
-                        <h3 className="text-lg font-medium text-gray-700 mb-1">Baby names directory</h3>
-                        <p className="text-gray-500 text-center text-sm mb-2">
-                            Search our comprehensive directory of baby names to find the perfect name.
-                        </p>
-                        <Link to="/tools/baby-names" className="text-blue-500 text-sm">
-                            Search names
-                        </Link>
-                    </div>
+                    </Link>
                 </div>
             </section>
 
@@ -173,13 +193,7 @@ const HomePage = () => {
                 <button className="bg-red-500 text-white px-6 py-3 rounded-full inline-flex items-center">
                     DONATE TODAY <Heart size={16} className="ml-2" />
                 </button>
-                <div className="mt-6">
-                    <img
-                        src="/images/baby.jpg"
-                        alt="Baby with heart"
-                        className="w-full max-w-md mx-auto rounded-md"
-                    />
-                </div>
+
             </section>
 
             {/* Talk to an Educator */}
@@ -218,74 +232,7 @@ const HomePage = () => {
 
 
 
-            {/* Blog Section */}
-            <section className="container mx-auto px-4 py-8">
-                <h3 className="text-2xl font-medium text-gray-700 mb-6">From the Blog</h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Blog Post 1 */}
-                    <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-                        <div className="relative">
-                            <span className="absolute top-2 left-2 bg-pink-400 text-white text-xs py-1 px-2 rounded">
-                                Healthy Pregnancy
-                            </span>
-                            <img
-                                src="/images/blog-babyblues.jpg"
-                                alt="Woman with baby"
-                                className="w-full h-48 object-cover"
-                            />
-                        </div>
-                        <div className="p-4">
-                            <h4 className="text-lg font-medium mb-2">
-                                Beyond Baby Blues: Addressing 5 Physical Changes After Childbirth
-                            </h4>
-                            <p className="text-gray-600 text-sm">
-                                When it is said that motherhood changes you, they are very right. Your baby now takes center stage in your...
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Blog Post 2 */}
-                    <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-                        <div className="relative">
-                            <span className="absolute top-2 left-2 bg-pink-400 text-white text-xs py-1 px-2 rounded">
-                                Is It Safe While Pregnant
-                            </span>
-                            <img
-                                src="/images/blog-coffee.jpg"
-                                alt="Coffee roasting"
-                                className="w-full h-48 object-cover"
-                            />
-                        </div>
-                        <div className="p-4">
-                            <h4 className="text-lg font-medium mb-2">
-                                How Coffee Beans are Decaffeinated Matters - Why choose Swiss Water Process Decaf?
-                            </h4>
-                            <p className="text-gray-600 text-sm">
-                                Millions of Moms love the taste, warmth and comfort of a great cup of coffee. Ideally organic coffee is what...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Additional Blog Post */}
-                <div className="mt-6 bg-white rounded-lg overflow-hidden shadow-sm">
-                    <div className="p-4">
-                        <span className="inline-block bg-pink-400 text-white text-xs py-1 px-2 rounded mb-2">
-                            Unplanned Pregnancy
-                        </span>
-                        <h4 className="text-lg font-medium mb-2">
-                            Navigating Vasectomy Recovery: 5 Expert Tips
-                        </h4>
-                        <p className="text-gray-600 text-sm mb-4">
-                            While the vasectomy procedure itself is typically quick and has a high success rate, proper aftercare and understanding of...
-                        </p>
-                        <button className="bg-pink-400 text-white px-4 py-2 rounded-full text-sm">
-                            VIEW ALL
-                        </button>
-                    </div>
-                </div>
-            </section>
 
             {/* Newsletter Signup */}
             <section className="bg-pink-100 py-8">
@@ -332,11 +279,11 @@ const HomePage = () => {
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col items-center mb-6">
                         <img
-                            src="/images/logo.png"
+                            src={logo}
                             alt="American Pregnancy Association Logo"
-                            className="h-12 mb-2"
+                            className="h-[100px] w-[100px] mb-2"
                         />
-                        <h2 className="text-pink-400 text-lg font-semibold">American Pregnancy Association</h2>
+                        <h2 className="text-pink-400  font-semibold text-2xl">GARBHSUTRA</h2>
                     </div>
 
                     {/* Social Links */}
@@ -386,21 +333,6 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    {/* Resources */}
-                    <div className="text-center md:text-left mb-8">
-                        <h4 className="font-medium mb-3">Resources</h4>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-gray-600">
-                            <Link to="/blog">Blog</Link>
-                            <Link to="/directory">Directory</Link>
-                            <Link to="/bumpy-truth">The Bumpy Truth Blog</Link>
-                            <Link to="/fertility-guide">Fertility Products Resource Guide</Link>
-                        </div>
-                    </div>
-
-                    {/* Copyright */}
-                    <div className="text-center text-gray-500 text-sm">
-                        <p>&copy; {new Date().getFullYear()} American Pregnancy Association. All Rights Reserved.</p>
-                    </div>
                 </div>
             </footer>
         </div>

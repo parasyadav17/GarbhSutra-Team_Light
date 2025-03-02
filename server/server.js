@@ -3,6 +3,8 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import blogRoutes from "./routes/blogRoutes.js";
+import calendarRoutes from "./routes/calendarRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 dotenv.config();
 const app = express();
@@ -24,3 +26,5 @@ mongoose.connect(process.env.MONGO_URI, {
     .catch((error) => console.error("MongoDB connection error:", error));
 
 app.use("/api/blogs", blogRoutes);
+app.use("/api/calendar", calendarRoutes);
+app.use("/api/auth", authRoutes);

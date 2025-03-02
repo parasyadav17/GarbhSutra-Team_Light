@@ -36,23 +36,27 @@ const NearbyHospitals = () => {
     };
 
     return (
-        <MapContainer center={location} zoom={14} style={{ height: "500px", width: "100%" }}>
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <div className="m-60 border-4 border-black">
 
-            {/* User Location Marker */}
-            <Marker position={location}>
-                <Popup>Your Location</Popup>
-            </Marker>
+            <MapContainer center={location} zoom={14} style={{ height: "500px", width: "100%" }}>
+                <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
-            {/* Nearby Hospitals */}
-            {hospitals.map((hospital, index) => (
-                <Marker key={index} position={[hospital.lat, hospital.lon]}>
-                    <Popup>
-                        <b>{hospital.display_name}</b>
-                    </Popup>
+                {/* User Location Marker */}
+                <Marker position={location}>
+                    <Popup>Your Location</Popup>
                 </Marker>
-            ))}
-        </MapContainer>
+
+                {/* Nearby Hospitals */}
+                {hospitals.map((hospital, index) => (
+                    <Marker key={index} position={[hospital.lat, hospital.lon]}>
+                        <Popup>
+                            <b>{hospital.display_name}</b>
+                        </Popup>
+                    </Marker>
+                ))}
+            </MapContainer>
+        </div>
+
     );
 };
 

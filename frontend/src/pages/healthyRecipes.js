@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import img16 from "../assets/img16.jpeg"
+import img17 from "../assets/img17.webp"
+import img18 from "../assets/img18.webp"
 
 export default function HealthyPregnancyRecipes() {
     const [recipes, setRecipes] = useState([]);
@@ -39,15 +42,29 @@ export default function HealthyPregnancyRecipes() {
             </header>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {recipes.map((recipe, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                        <img src={recipe.image} alt={recipe.title} className="w-full h-40 object-cover" />
-                        <div className="p-4">
-                            <h2 className="text-lg font-semibold">{recipe.title}</h2>
-                            <p className="text-yellow-500">{'★'.repeat(Math.round(recipe.rating))}</p>
-                        </div>
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src={img16} alt="Tuna Puttanesca Pasta" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                        <h2 className="text-lg font-semibold">Tuna Puttanesca Pasta</h2>
+                        <p className="text-yellow-500">{'★'.repeat(5)}</p>
                     </div>
-                ))}
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src={img17} alt="Grilled Salmon Avocado Salad" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                        <h2 className="text-lg font-semibold">Grilled Salmon Avocado Salad</h2>
+                        <p className="text-yellow-500">{'★'.repeat(5)}</p>
+                    </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src={img18} alt="Healthy Banana Split" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                        <h2 className="text-lg font-semibold">Healthy Banana Split</h2>
+                        <p className="text-yellow-500">{'★'.repeat(5)}</p>
+                    </div>
+                </div>
             </div>
         </div>
     );

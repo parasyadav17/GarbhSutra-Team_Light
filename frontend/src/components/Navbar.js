@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaCalculator, FaCalendarAlt, FaBook, FaQuestionCircle, FaHeadset, FaSearch, FaHeart } from 'react-icons/fa';
-import logo from "../assets/logo3.png"
+import logo from "../assets/super.jpg"
+
 
 const Navbar = () => {
     const [activeDropdown, setActiveDropdown] = useState(null);
@@ -17,7 +18,7 @@ const Navbar = () => {
                 <div className="flex items-center">
                     <Link to="/" className="mr-6">
                         <div className="flex items-center">
-                            <img src={logo} width="200px" height="200px" />
+                            <img src={logo} width="180px" height="180px" />
                         </div>
                     </Link>
                 </div>
@@ -37,17 +38,17 @@ const Navbar = () => {
                     <div className="border-t border-b text-sm ">
                         <div className="container  flex justify-between ">
                             <div className="flex ">
-                                <Link to="/due-date" className="flex items-center px-4 py-4">
+                                <Link to="/pregnancy-due-date-calculator" className="flex items-center px-4 py-4">
                                     <FaCalculator className="text-gray-500 mr-2" />
                                     <span className="text-gray-700">Pregnancy Due Date Calculator</span>
                                 </Link>
 
-                                <Link to="/ovulation-calendar" className="flex items-center px-4 py-4">
+                                <Link to="/calendar" className="flex items-center px-4 py-4">
                                     <FaCalendarAlt className="text-gray-500 mr-2" />
-                                    <span className="text-gray-700">Ovulation Calendar</span>
+                                    <span className="text-gray-700">HealthTrack Calendar</span>
                                 </Link>
 
-                                <Link to="/baby-names" className="flex items-center px-4 py-4">
+                                <Link to="/baby-name-directory" className="flex items-center px-4 py-4">
                                     <FaBook className="text-gray-500 mr-2" />
                                     <span className="text-gray-700">Baby Names Directory</span>
                                 </Link>
@@ -81,12 +82,10 @@ const Navbar = () => {
                                         <Link to="/am-i-pregnant" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                                             Am I Pregnant?
                                         </Link>
-                                        <Link to="/options" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                                            Your Options
+                                        <Link to="/keep-and-parent" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                            Keep and Parent
                                         </Link>
-                                        <Link to="/support" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                                            Finding Support
-                                        </Link>
+
                                     </div>
                                 )}
                             </div>
@@ -180,13 +179,34 @@ const Navbar = () => {
                                 )}
                             </div>
 
-                            <div className="flex items-center ml-auto">
+                            <div className="relative group">
+                                <button
+                                    className="flex items-center px-6 py-4 bg-cyan-700 text-white"
+                                    onClick={() => handleDropdownToggle('register')}
+                                >
+                                    Register
+                                    <span className="ml-1">▼</span>
+                                </button>
+                                {activeDropdown === 'register' && (
+                                    <div className="absolute z-10 bg-white shadow-lg w-48">
+                                        <Link to="/login" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                            Login
+                                        </Link>
+                                        <Link to="/register" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                                            Sign Up
+                                        </Link>
+                                    </div>
+                                )}
+                            </div>
+
+
+                            {/* <div className="flex items-center ml-auto">
 
                                 <Link to="/donate" className="flex items-center px-6 py-4 bg-green-600 text-white hover:bg-green-700">
                                     <FaHeart className="mr-2" />
                                     DONATE NOW
                                 </Link>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
