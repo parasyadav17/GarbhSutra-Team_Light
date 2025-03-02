@@ -2,7 +2,7 @@
 
 - **GitHub Repo:** [**Pregnancy Support GitHub**](https://github.com/Pranav6185/HM0075_TEAM_LIGHT)
 - **Live Demo:** [**Pregnancy Support Live Demo**](https://chatgpt.com/c/67c2bd6d-f29c-8010-b84d-b75c30d4aacf)
-- **Google Drive:** [**Pregnancy Support Live Demo**](https://drive.google.com/drive/folders/1U_nakTgaEFPRxDAo7_D96g3G8t8w8Gc5?usp=drive_link)
+- **Google Drive:** [**Documentation And PPT Presentation**](https://drive.google.com/drive/folders/1U_nakTgaEFPRxDAo7_D96g3G8t8w8Gc5?usp=drive_link)
 
 ### Problem Statement
 
