@@ -84,7 +84,7 @@ Pregnancy is a beautiful yet challenging journey, and expectant mothers deserve 
 ### Flowchart Of Website
 
 
-![Website Flowchart](frontend/src/assets/flowchart.png)
+![Website Flowchart](frontend/src/assets/flowchart.jpg)
 ### Implementation Details
 
 - **Frontend:** Built using React.js and Tailwind CSS for a modern UI.
