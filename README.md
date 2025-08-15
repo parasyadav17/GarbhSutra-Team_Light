@@ -1,6 +1,6 @@
 ### Project Links
 
-- **GitHub Repo:** [**Pregnancy Support GitHub**](https://github.com/Pranav6185/HM0075_TEAM_LIGHT)
+- **GitHub Repo:** [**Pregnancy Support GitHub**](https://github.com/parasyadav17/GarbhSutra-Team_Light)
 - **Live Demo:** [**Pregnancy Support Live Demo**](https://www.loom.com/share/461826200afd498e91035935a6e3181d?sid=dba07e34-695c-4cca-af40-a440316cd3b9 )
 - **Google Drive:** [**Documentation And PPT Presentation**](https://drive.google.com/drive/folders/1U_nakTgaEFPRxDAo7_D96g3G8t8w8Gc5?usp=drive_link)
 
@@ -125,7 +125,7 @@ Pregnancy is a beautiful yet challenging journey, and expectant mothers deserve 
 
 ### Installation & Usage Instructions
 
-1. **Clone the GitHub repository:** git clone <http://github.com/Pranav6185/HM0075_TEAM_LIGHT.git>
+1. **Clone the GitHub repository:** git clone <http://github.com/yadavparas17/GarbhSutra-Team_Light.git>
 2. **Frontend Setup:**
 
 - **Navigate to Frontend Folder:** cd frontend
@@ -140,10 +140,9 @@ Pregnancy is a beautiful yet challenging journey, and expectant mothers deserve 
 
 - **.env file configurations:**
 
-MONGO_URI=mongodb+srv://light18:Light181@atlasdemo.dtstj2t.mongodb.net/?retryWrites=true&w=majority&appName=AtlasDemo
+MONGO_URI= Your MongoDB URL
 
-PORT=5000 JWT_SECRET=5fea131039bfd9d70e13f146c9b1a77330c0e020de9a182b87f3507c301e292ef69d12e5c3453b39c50663e0ad611b2631b4876bf61a183d51ad0e7925eb480d
-
+PORT= PORT NO. JWT_SECRET= JWT_SECRET_KEY
 - **Or you can add your own Mongo URI:**
 
 MONGO_URI = Your_mongo_URI.
