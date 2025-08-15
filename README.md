@@ -125,7 +125,7 @@ Pregnancy is a beautiful yet challenging journey, and expectant mothers deserve 
 
 ### Installation & Usage Instructions
 
-1. **Clone the GitHub repository:** git clone <http://github.com/yadavparas17/GarbhSutra-Team_Light.git>
+1. **Clone the GitHub repository:** git clone <http://github.com/parasyadav17/GarbhSutra-Team_Light.git>
 2. **Frontend Setup:**
 
 - **Navigate to Frontend Folder:** cd frontend
